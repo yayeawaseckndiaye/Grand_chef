@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nôtre menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow fs-5">
+            <div class="container">
+
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/logo.png" alt="Logo Le Grand Chef" style="height: 50px;">
+                    <span class="text-gold fs-5">Le Grand Chef</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 me-4">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/galerie.html">Galerie</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/histoire.html">Histoire</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="d-flex ms-auto align-items-center">
+                        <button class="btn btn-outline-gold" data-bs-toggle="modal" data-bs-target="#panierModal">
+                            🛒 Panier <span id="cart-count" class="badge bg-danger ms-1">0</span>
+                        </button>
+                        <a class="btn btn-gold btn-sm ms-3" href="../pages/réservation.html">Réserver</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <section id="menu-content" class="container py-5 mt-5">
+        <h1 class="text-center text-gold mb-5">Notre Menu Gastronomique Sénégalais</h1>
+
+        <div id="menu-filters" class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+            <button class="btn btn-gold filter-btn active" data-filter="all">Toutes les Catégories</button>
+            <button class="btn btn-outline-gold filter-btn" data-filter="entree">Entrées</button>
+            <button class="btn btn-outline-gold filter-btn" data-filter="plat">Plats Typiques</button>
+            <button class="btn btn-outline-gold filter-btn" data-filter="dessert">Desserts</button>
+            <button class="btn btn-outline-gold filter-btn" data-filter="boisson">Boissons & Jus Locaux</button>
+        </div>
+
+        <div id="menu-items-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            <div class="col menu-item" data-category="plat">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/riz au poisson rouge.webp" class="card-img-top" alt="Thiéboudienne"
+                        loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Thiéboudienne Rouge</h5>
+                        <p class="card-text">Le plat national : riz gras au poisson frais, légumes et une sauce tomate
+                            riche.</p>
+                        <p class="h4 text-end mb-3">2 500 FCFA</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Thiéboudienne Rouge"
+                                data-price="15000">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="plat">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/Caldou.webp" class="card-img-top" alt="Poulet Yassa" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Caldou</h5>
+                        <p class="card-text">Ce plat de poisson cuit dans une sauce citronnée à base d’huile de palme
+                            est servi avec du riz.</p>
+                        <p class="h4 text-end">2 500  FFCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Caldou" data-price="12000">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="entree">
+
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/Salade de niébé.webp" class="card-img-top" alt="Salade Fraîche" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Salade de niébé(ou haricot blanc)</h5>
+                        <p class="card-text"> il est souvent mélangé avec des oignons, des tomates et une vinaigrette
+                            simple. Rafraîchissant et nourrissant.</p>
+                        <p class="h4 text-end">2 000 FFCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Salade de niébé"
+                                data-price="7000">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="dessert">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/thiakry.webp" class="card-img-top" alt="Thiékrè">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Thiékrè Royal</h5>
+                        <p class="card-text">Couscous de mil dans un mélange crémeux de yaourt frais, vanille et fruits
+                            secs.</p>
+                        <p class="h4 text-end">1 500 XOF</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Thiékrè Royal"
+                                data-price="6500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="boisson">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/jus de bissap.webp" class="card-img-top" alt="Jus de Bissap">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Jus de Bissap Fait Maison</h5>
+                        <p class="card-text">Boisson rafraîchissante à base de fleur d'hibiscus, naturelle et très
+                            savoureuse.</p>
+                        <p class="h4 text-end">1 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Jus de Bissap Fait Maison"
+                                data-price="3000">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="boisson">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/jus de citron.jpg" class="card-img-top" alt="Jus de Gingembre">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Jus de Citron</h5>
+                        <p class="card-text">Boisson revigorante et piquante à base de gingembre frais et d'une touche
+                            d'ananas.</p>
+                        <p class="h4 text-end">1 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Jus de Citron"
+                                data-price="3500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="entree">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/fataya.webp" class="card-img-top" alt="Pastel de viande">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Pastel de viande</h5>
+                        <p class="card-text">
+                            Ce sont de petits beignets farcis au poisson ou à la viande, souvent servis avec
+                            une sauce tomate épicée.
+                        </p>
+                        <p class="h4 text-end">1 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Pastel de viande"
+                                data-price="10000">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="plat">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/mafé.webp" class="card-img-top" alt="Mafé" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Mafé Traditionnel</h5>
+                        <p class="card-text">Viande de bœuf ou d'agneau mijotée dans une sauce onctueuse à base
+                            d'arachide,accompagnée de riz blanc.</p>
+                        <p class="h4 text-end">3 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Mafé Traditionnel"
+                                data-price="13500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="plat">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/Soupe Kandia.webp" class="card-img-top" alt="Soupa Kandja" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Soupa Kandja (Gombo)</h5>
+                        <p class="card-text">Ragoût riche en fruits de mer (crevettes, poisson), gombo et huile de
+                            palme. Servi avec du riz.</p>
+                        <p class="h4 text-end">3 000 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Soupa Kandja"
+                                data-price="16000">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="entree">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/accras.jpg" class="card-img-top" alt="Accras de Morue" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Accras de Morue Épicés</h5>
+                        <p class="card-text">Petits beignets de morue et d'herbes aromatiques, légers et croustillants.
+                            Parfaits en mise en bouche.</p>
+                        <p class="h4 text-end">4 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Accras de Morue Épicés"
+                                data-price="4500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="boisson">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/jus de gayave.jpg" class="card-img-top" alt="Jus de Gingembre">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Jus de Goyave</h5>
+                        <p class="card-text">Jus frais et doux à base de goyave locale. Naturel et exotique.</p>
+                        <p class="h4 text-end">1 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Jus de Goyave"
+                                data-price="3500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="boisson">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/jus de mangue.jpg" class="card-img-top" alt="Jus de Gingembre">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Jus de Mangue</h5>
+                        <p class="card-text">Nectar épais et sucré à base de mangues fraîches de saison.</p>
+                        <p class="h4 text-end">1 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Jus de Mangue"
+                                data-price="3500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="dessert">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/beignets.webp" class="card-img-top" alt="Lakh">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Beignets</h5>
+                        <p class="card-text">
+                            Une bouillie traditionnelle à base de mil, souvent consommée avec du lait ou du yaourt, du
+                            sucre.
+                        </p>
+                        <p class="h4 text-end">1 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Beignets" data-price="8500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="plat">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/thiébou yapp.webp" class="card-img-top" alt="Thiéboudienne" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Thiébou yapp(boeuf)</h5>
+                        <p class="card-text">riz gras au boeuf, avec une sauce d'oignons
+                            et des légumes couper en petite morceaux.</p>
+                        <p class="h4 text-end">4 000 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Thiébou yapp (boeuf)"
+                                data-price="15000">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="dessert">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/galax.webp" class="card-img-top" alt="Mousse de Bouye">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Galakh</h5>
+                        <p class="card-text">
+                            Dessert crémeux et frais à base de couscous, de lait fermenté et de morceaux de fruits.
+                        </p>
+                        <p class="h4 text-end">2 000 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Galakh" data-price="7500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="boisson">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/jus de tamarin.webp" class="card-img-top" alt="Jus de Gingembre">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Jus de Tamarin</h5>
+                        <p class="card-text">Boisson acidulée et sucrée à base de tamarin, excellente pour la digestion.
+                        </p>
+                        <p class="h4 text-end">1 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Jus de Tamarin"
+                                data-price="3500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col menu-item" data-category="boisson">
+                <div class="card bg-dark text-light border-gold h-100">
+                    <img src="../images/jus de bouy.webp" class="card-img-top" alt="Jus de Gingembre">
+                    <div class="card-body">
+                        <h5 class="card-title text-gold">Jus de Bouye</h5>
+                        <p class="card-text">Jus rafraîchissant à base de fruit de baobab (Bouye), riche et crémeux.</p>
+                        <p class="h4 text-end">1 500 FCFA</p>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-lg btn-gold add-to-cart-btn" data-name="Jus de Bouye"
+                                data-price="3500">
+                                <i class="bi bi-cart-plus-fill"></i> Ajouter au Panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+  
+    <footer class="accueil  text-center text-white-50 py-3 mt-auto bg-black">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Le Grand Chef. Tous droits réservés.</p>
+            <p class="mb-0"><a href="mentions.html" class="text-white-50 text-decoration-none">Mentions Légales</a> |
+                Conception avec Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL PANIER -->
+    <div class="modal fade" id="panierModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-gold">
+                <div class="modal-header border-gold">
+                    <h5 class="modal-title text-gold">🛒 Votre Panier</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cart-items" class="list-group list-group-flush"></ul>
+                    <div class="d-flex justify-content-between mt-3">
+                        <h4>Total :</h4>
+                        <h4 id="cart-total" class="text-gold">0 FCFA</h4>
+                    </div>
+                </div>
+                <div class="modal-footer border-gold">
+                    <button id="clear-cart" class="btn btn-outline-gold">Vider le Panier</button>
+                    <a id="whatsapp-btn" class="btn btn-gold" target="_blank">Valider sur WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/menu.js"></script>
+
+</body>
+
+</html>

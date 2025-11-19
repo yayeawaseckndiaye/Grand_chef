@@ -1,0 +1,41 @@
+*{ box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* Variables pour le thème*/
+:root {
+    --gold: #D4AF37; 
+    --dark-bg: #1A1A1A;
+}
+
+/* Titre en Or */
+.text-gold {
+    color: var(--gold);
+    font-family: 'Serif Elegant', Georgia, serif; /* Police élégante */
+}
+
+/* Style du bouton réserver en "Or" */
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--dark-bg);
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+.btn-outline-gold {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+.btn-outline-gold:hover{
+    background-color: var(--gold);
+    color: var(--dark-bg);
+}
+
+
+
+

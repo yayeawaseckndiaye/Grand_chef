@@ -1,0 +1,64 @@
+*{ box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ======================================= 
+ Styles pour la Galerie 
+ ======================================= */
+
+/* Variables pour le thème*/
+:root {
+    --gold: #D4AF37; 
+    --dark-bg: #1A1A1A;
+}
+
+/* Titre en Or */
+.text-gold {
+    color: var(--gold);
+    font-family: 'Serif Elegant', Georgia, serif; /* Police élégante */
+}
+/* Style du bouton "Or" */
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--dark-bg);
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+.btn-outline-gold {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+.btn-outline-gold:hover{
+    background-color: var(--gold);
+    color: var(--dark-bg);
+}
+
+
+/* ========================================================================
+ le style POUR LA TAILLE DES IMAGES -
+ ========================================================================= */
+ 
+/* Style appliqué au conteneur du lien (l'élément <a>) */
+.gallery-link {
+    display: block;    
+    aspect-ratio: 1 / 1;  /* Définir le ratio d'aspect. Ici, nous choisissons un CARRÉ parfait (1/1). Vous pouvez utiliser 4/3 pour un rectangle horizontal. */
+    overflow: hidden;     /* Cacher tout ce qui dépasse, au cas où l'image serait plus grande que le ratio */
+    transition: transform 0.3s ease-in-out;  /* Amélioration visuelle (optionnel) */
+}
+
+/* Style appliqué à l'image elle-même */
+.gallery-img {
+    /* L'image doit prendre 100% de la largeur et 100% de la hauteur de son conteneur (le lien) */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Force l'image à couvrir tout l'espace sans se déformer, coupant ce qui est en trop. */
+}
+.gallery-link:hover {
+    transform: scale(1.05);
+}

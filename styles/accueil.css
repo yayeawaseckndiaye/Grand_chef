@@ -1,0 +1,69 @@
+*{ box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Définition de la couleur Or */
+:root {
+    --gold: #D4AF37; 
+    --dark-bg: #1A1A1A;
+}
+
+/* Titre en Or */
+.text-gold {
+    color: var(--gold);
+    font-family: 'Serif Elegant', Georgia, serif; /* Police élégante */
+}
+
+/* Style du bouton "Or" */
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--dark-bg);
+    border: 1px solid var(--gold);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--gold);
+} 
+.btn-outline-gold {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+.btn-outline-gold:hover{
+    background-color: var(--gold);
+    color: var(--dark-bg);
+}
+
+/* ======================================= 
+ Styles pour la section principal (le carousel)
+ ======================================= */
+
+#accueil .carousel-item {
+    height: 100vh; /* Pleine hauteur de l'écran */
+    min-height: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#accueil .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Ombre noire semi-transparente */
+}
+
+/* Centrage vertical du contenu */
+#accueil  .carousel-caption {
+    bottom: 0;
+    top: 0;
+    left: 15%;
+    right: 15%;
+}
